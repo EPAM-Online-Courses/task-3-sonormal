@@ -31,11 +31,8 @@ public class Main {
                     System.out.println("Aktualnie walczacy osadnik to " + villager.getName());
 
                     for (Monster monster : monsters) {
-                        if (monster.getHealth() > 0) {
+                        if (monster.getHealth() >= 0) {
                             villager.attack(monster);
-                            if (monster.getHealth() <= 0) {
-                                monster.setDead(true);
-                            }
                         }
                     }
                     totalMonsterHealth = Monsters.monstersHealth(); // aktualizacja sumy życia potworów
